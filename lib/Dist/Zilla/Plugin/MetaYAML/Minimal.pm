@@ -16,14 +16,14 @@ use Try::Tiny qw( try catch );
 with 'Dist::Zilla::Role::FileGatherer';
 
 has filename => (
-  is  => 'ro',
-  isa => 'Str',
+  is      => 'ro',
+  isa     => 'Str',
   default => 'META.yml',
 );
 
 has version => (
-  is  => 'ro',
-  isa => 'Num',
+  is      => 'ro',
+  isa     => 'Num',
   default => '1.4',
 );
 
@@ -36,9 +36,9 @@ sub gather_files {
   require Dist::Zilla::File::FromCode;
   require YAML::Tiny;
   require CPAN::Meta::Converter;
-  CPAN::Meta::Converter->VERSION(2.101550); # improved downconversion
+  CPAN::Meta::Converter->VERSION(2.101550);    # improved downconversion
   require CPAN::Meta::Validator;
-  CPAN::Meta::Validator->VERSION(2.101550); # improved downconversion
+  CPAN::Meta::Validator->VERSION(2.101550);    # improved downconversion
 
   my $zilla = $self->zilla;
 
@@ -57,7 +57,7 @@ sub gather_files {
       }
 
       my $converter = CPAN::Meta::Converter->new($distmeta);
-      my $output    = $converter->convert(version => $self->version);
+      my $output    = $converter->convert( version => $self->version );
 
       for my $key ( keys %{$output} ) {
         delete $output->{$key} if $key =~ /\Ax_/sx;
