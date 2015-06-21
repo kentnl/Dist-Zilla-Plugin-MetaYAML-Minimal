@@ -46,11 +46,7 @@ sub gather_files {
     name => $self->filename,
     code_return_type => 'text',
     code => sub {
-      my $distmeta  = { %{  $zilla->distmeta } };
-
-      for my $key ( keys %{$distmeta} ) {
-        delete $distmeta->{$key} if $key =~ /^x_/;
-      }
+      my $distmeta = $zilla->distmeta;
 
       my $validator = CPAN::Meta::Validator->new($distmeta);
 
@@ -62,6 +58,11 @@ sub gather_files {
 
       my $converter = CPAN::Meta::Converter->new($distmeta);
       my $output    = $converter->convert(version => $self->version);
+
+      for my $key ( keys %{$output} ) {
+        delete $output->{$key} if $key =~ /^x_/;
+      }
+
       my $yaml = try {
         YAML::Tiny->new($output)->write_string; # text!
       }
