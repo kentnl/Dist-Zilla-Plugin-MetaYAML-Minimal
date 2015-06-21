@@ -100,6 +100,7 @@
             "CPAN::Meta::Validator" : "2.101550",
             "Dist::Zilla::File::FromCode" : "0",
             "Dist::Zilla::Role::FileGatherer" : "0",
+            "Dist::Zilla::Util::ConfigDumper" : "0",
             "Moose" : "0",
             "Try::Tiny" : "0",
             "YAML::Tiny" : "0",
@@ -738,6 +739,12 @@
          },
          {
             "class" : "Dist::Zilla::Plugin::MetaYAML::Minimal",
+            "config" : {
+               "Dist::Zilla::Plugin::MetaYAML::Minimal" : {
+                  "filename" : "META.yml",
+                  "version" : "1.4"
+               }
+            },
             "name" : "MetaYAML::Minimal",
             "version" : "0.001000"
          },

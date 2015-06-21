@@ -10,8 +10,9 @@ our $VERSION = '0.001000';
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
-use Moose qw( has with );
+use Moose qw( has with around );
 use Try::Tiny qw( try catch );
+use Dist::Zilla::Util::ConfigDumper qw( config_dumper );
 
 with 'Dist::Zilla::Role::FileGatherer';
 
@@ -26,6 +27,8 @@ has version => (
   isa     => 'Num',
   default => '1.4',
 );
+
+around dump_config => config_dumper( __PACKAGE__, qw( filename version ) );
 
 __PACKAGE__->meta->make_immutable;
 no Moose;
