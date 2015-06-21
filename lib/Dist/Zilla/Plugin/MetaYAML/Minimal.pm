@@ -30,6 +30,10 @@ has version => (
 __PACKAGE__->meta->make_immutable;
 no Moose;
 
+
+
+
+
 sub gather_files {
   my ($self,) = @_;
 
@@ -108,6 +112,8 @@ Presently, this extension is a I<PROTOTYPE>, and just culls fields leading with 
 
 The final behavior may require enhancements to C<CPAN::Meta::Converter> and might be possibly superseded
 by patches to C<MetaYAML> itself.
+
+=for Pod::Coverage gather_files
 
 =head1 AUTHOR
 
