@@ -11,7 +11,7 @@ our $VERSION = '0.001000';
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
 use Moose qw( has with );
-use Try::Tiny;
+use Try::Tiny qw( try catch );
 
 with 'Dist::Zilla::Role::FileGatherer';
 
@@ -31,7 +31,7 @@ __PACKAGE__->meta->make_immutable;
 no Moose;
 
 sub gather_files {
-  my ($self, $arg) = @_;
+  my ($self,) = @_;
 
   require Dist::Zilla::File::FromCode;
   require YAML::Tiny;
@@ -50,9 +50,9 @@ sub gather_files {
 
       my $validator = CPAN::Meta::Validator->new($distmeta);
 
-      unless ($validator->is_valid) {
+      if ( not $validator->is_valid ) {
         my $msg = "Invalid META structure.  Errors found:\n";
-        $msg .= join( "\n", $validator->errors );
+        $msg .= join "\n", $validator->errors;
         $self->log_fatal($msg);
       }
 
@@ -60,14 +60,14 @@ sub gather_files {
       my $output    = $converter->convert(version => $self->version);
 
       for my $key ( keys %{$output} ) {
-        delete $output->{$key} if $key =~ /^x_/;
+        delete $output->{$key} if $key =~ /\Ax_/sx;
       }
 
       my $yaml = try {
         YAML::Tiny->new($output)->write_string; # text!
       }
       catch {
-        $self->log_fatal("Could not create YAML string: " . YAML::Tiny->errstr)
+        $self->log_fatal('Could not create YAML string: ' . YAML::Tiny->errstr);
       };
       return $yaml;
     },
