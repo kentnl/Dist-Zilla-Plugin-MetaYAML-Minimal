@@ -11,6 +11,12 @@ This "Dist::Zilla" extension is for such circumstances.
 However, if you are *only* shipping "META.yml" and NOT "META.json", then
 using this extension would be harmful and cause loss of information.
 
+Presently, this extension is a *PROTOTYPE*, and just culls fields
+leading with "x_" passed by "Dist::Zilla".
+
+The final behaviour may require enhancements to "CPAN::Meta::Converter"
+and might be possibly superceded by patches to "MetaYAML" itself.
+
 INSTALLATION
 
 This is a Perl module distribution. It should be installed with whichever

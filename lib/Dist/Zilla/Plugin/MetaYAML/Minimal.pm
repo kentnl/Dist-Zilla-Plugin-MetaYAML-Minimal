@@ -1,4 +1,4 @@
-use 5.006;  # our
+use 5.006;    # our
 use strict;
 use warnings;
 
@@ -41,6 +41,11 @@ This L<C<Dist::Zilla>|Dist::Zilla> extension is for such circumstances.
 
 However, if you are I<only> shipping C<META.yml> and B<NOT> C<META.json>, then using this extension
 would be harmful and cause loss of information.
+
+Presently, this extension is a I<PROTOTYPE>, and just culls fields leading with C<x_> passed by C<Dist::Zilla>.
+
+The final behaviour may require enhancements to C<CPAN::Meta::Converter> and might be possibly superceded
+by patches to C<MetaYAML> itself.
 
 =head1 AUTHOR
 
