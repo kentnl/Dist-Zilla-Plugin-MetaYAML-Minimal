@@ -46,7 +46,7 @@ sub gather_files {
     name => $self->filename,
     code_return_type => 'text',
     code => sub {
-      my $distmeta  = $zilla->distmeta;
+      my $distmeta  = { %{  $zilla->distmeta } };
 
       for my $key ( keys %{$distmeta} ) {
         delete $distmeta->{$key} if $key =~ /^x_/;
