@@ -6,9 +6,10 @@ license          = Perl_5
 copyright_holder = Kent Fredric <kentfredric@gmail.com>
 
 ; Uncomment this to bootstrap via self
-; [Bootstrap::lib]
+[Bootstrap::lib]
 
 [@Author::KENTNL]
+-remove           = MetaYAML
 :version          = 2.024001
 normal_form       = numify
 mantissa          = 6
@@ -17,8 +18,10 @@ toolkit_hardness  = soft
 bumpversions      = 1
 copyfiles         = LICENSE
 srcreadme         = mkdn
-; twitter_extra_hash_tags =
+twitter_extra_hash_tags = #distzilla
 ; auto_prereqs_skip = File::Find
+
+[MetaYAML::Minimal]
 
 [Prereqs]
 

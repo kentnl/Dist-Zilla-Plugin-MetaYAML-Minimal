@@ -1,4 +1,4 @@
 Release history for Dist-Zilla-Plugin-MetaYAML-Minimal
 
 {{$NEXT}}
- - First version.
+ - Initial release that demonstrates itself via bootstrap
