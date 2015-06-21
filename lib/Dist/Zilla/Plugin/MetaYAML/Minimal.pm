@@ -10,8 +10,10 @@ our $VERSION = '0.001000';
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
-use Moose qw( has );
+use Moose qw( has with );
 use Try::Tiny;
+
+with 'Dist::Zilla::Role::FileGatherer';
 
 has filename => (
   is  => 'ro',
