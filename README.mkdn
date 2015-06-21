@@ -4,7 +4,7 @@ Dist::Zilla::Plugin::MetaYAML::Minimal - Generate a reductionist YAML META file 
 
 # VERSION
 
-version 0.001000
+version 0.001001
 
 # SYNOPSIS
 
