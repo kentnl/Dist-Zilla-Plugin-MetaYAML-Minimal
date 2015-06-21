@@ -97,6 +97,12 @@ Dist::Zilla::Plugin::MetaYAML::Minimal - Generate a reductionist YAML META file 
 
 version 0.001000
 
+=head1 SYNOPSIS
+
+  [MetaYAML::Minimal]
+  filename = META.yml ; default
+  version  = 1.4      ; default
+
 =head1 DESCRIPTION
 
 Generally, if you're creating both C<META.json> and C<META.yml>, then you're doing so purely for compatibility reasons.
