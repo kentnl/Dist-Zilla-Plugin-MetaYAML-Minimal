@@ -1,5 +1,5 @@
 ---
-abstract: 'Generate a reductionist META.yml for compatibility only'
+abstract: 'Generate a reductionist YAML META file for compatibility only'
 author:
   - 'Kent Fredric <kentnl@cpan.org>'
 build_requires:

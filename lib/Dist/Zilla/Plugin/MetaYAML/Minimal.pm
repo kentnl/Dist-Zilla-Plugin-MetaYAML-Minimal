@@ -6,7 +6,7 @@ package Dist::Zilla::Plugin::MetaYAML::Minimal;
 
 our $VERSION = '0.001000';
 
-# ABSTRACT: Generate a reductionist META.yml for compatibility only
+# ABSTRACT: Generate a reductionist YAML META file for compatibility only
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
@@ -25,7 +25,7 @@ __END__
 
 =head1 NAME
 
-Dist::Zilla::Plugin::MetaYAML::Minimal - Generate a reductionist META.yml for compatibility only
+Dist::Zilla::Plugin::MetaYAML::Minimal - Generate a reductionist YAML META file for compatibility only
 
 =head1 VERSION
 
@@ -35,7 +35,7 @@ version 0.001000
 
 Generally, if you're creating both C<META.json> and C<META.yml>, then you're doing so purely for compatibility reasons.
 
-In such circumstances, using the same metadata for both leads to a lot of cruft in C<META.yml>
+In such circumstances, using the same meta-data for both leads to a lot of cruft in C<META.yml>
 
 This L<C<Dist::Zilla>|Dist::Zilla> extension is for such circumstances.
 
@@ -44,7 +44,7 @@ would be harmful and cause loss of information.
 
 Presently, this extension is a I<PROTOTYPE>, and just culls fields leading with C<x_> passed by C<Dist::Zilla>.
 
-The final behaviour may require enhancements to C<CPAN::Meta::Converter> and might be possibly superceded
+The final behavior may require enhancements to C<CPAN::Meta::Converter> and might be possibly superseded
 by patches to C<MetaYAML> itself.
 
 =head1 AUTHOR

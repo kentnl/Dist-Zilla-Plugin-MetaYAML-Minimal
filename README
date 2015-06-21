@@ -3,7 +3,7 @@ Dist::Zilla::Plugin::MetaYAML::Minimal
 Generally, if you're creating both "META.json" and "META.yml", then
 you're doing so purely for compatibility reasons.
 
-In such circumstances, using the same metadata for both leads to a lot
+In such circumstances, using the same meta-data for both leads to a lot
 of cruft in "META.yml"
 
 This "Dist::Zilla" extension is for such circumstances.
@@ -14,8 +14,8 @@ using this extension would be harmful and cause loss of information.
 Presently, this extension is a *PROTOTYPE*, and just culls fields
 leading with "x_" passed by "Dist::Zilla".
 
-The final behaviour may require enhancements to "CPAN::Meta::Converter"
-and might be possibly superceded by patches to "MetaYAML" itself.
+The final behavior may require enhancements to "CPAN::Meta::Converter"
+and might be possibly superseded by patches to "MetaYAML" itself.
 
 INSTALLATION
 
