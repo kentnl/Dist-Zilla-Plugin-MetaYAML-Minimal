@@ -32,16 +32,16 @@ no Moose;
 
 sub gather_files {
   my ($self, $arg) = @_;
- 
+
   require Dist::Zilla::File::FromCode;
   require YAML::Tiny;
   require CPAN::Meta::Converter;
   CPAN::Meta::Converter->VERSION(2.101550); # improved downconversion
   require CPAN::Meta::Validator;
   CPAN::Meta::Validator->VERSION(2.101550); # improved downconversion
- 
+
   my $zilla = $self->zilla;
- 
+
   my $file  = Dist::Zilla::File::FromCode->new({
     name => $self->filename,
     code_return_type => 'text',
@@ -51,15 +51,15 @@ sub gather_files {
       for my $key ( keys %{$distmeta} ) {
         delete $distmeta->{$key} if $key =~ /^x_/;
       }
- 
+
       my $validator = CPAN::Meta::Validator->new($distmeta);
- 
+
       unless ($validator->is_valid) {
         my $msg = "Invalid META structure.  Errors found:\n";
         $msg .= join( "\n", $validator->errors );
         $self->log_fatal($msg);
       }
- 
+
       my $converter = CPAN::Meta::Converter->new($distmeta);
       my $output    = $converter->convert(version => $self->version);
       my $yaml = try {
@@ -71,7 +71,7 @@ sub gather_files {
       return $yaml;
     },
   });
- 
+
   $self->add_file($file);
   return;
 }
