@@ -7,7 +7,7 @@ use 5.006;
 use ExtUtils::MakeMaker;
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "Kent Failed To Provide An Abstract",
+  "ABSTRACT" => "Generate a reductionist META.yml for compatibility only",
   "AUTHOR" => "Kent Fredric <kentnl\@cpan.org>",
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0

@@ -1,6 +1,15 @@
 Dist::Zilla::Plugin::MetaYAML::Minimal
 
+Generally, if you're creating both "META.json" and "META.yml", then
+you're doing so purely for compatibility reasons.
 
+In such circumstances, using the same metadata for both leads to a lot
+of cruft in "META.yml"
+
+This "Dist::Zilla" extension is for such circumstances.
+
+However, if you are *only* shipping "META.yml" and NOT "META.json", then
+using this extension would be harmful and cause loss of information.
 
 INSTALLATION
 

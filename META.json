@@ -1,5 +1,5 @@
 {
-   "abstract" : "Kent Failed To Provide An Abstract",
+   "abstract" : "Generate a reductionist META.yml for compatibility only",
    "author" : [
       "Kent Fredric <kentnl@cpan.org>"
    ],
