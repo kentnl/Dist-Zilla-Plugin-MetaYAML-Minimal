@@ -95,7 +95,12 @@
             "Moose" : "2.000"
          },
          "requires" : {
+            "CPAN::Meta::Converter" : "2.101550",
+            "CPAN::Meta::Validator" : "2.101550",
+            "Dist::Zilla::File::FromCode" : "0",
             "Moose" : "0",
+            "Try::Tiny" : "0",
+            "YAML::Tiny" : "0",
             "perl" : "5.006",
             "strict" : "0",
             "warnings" : "0"

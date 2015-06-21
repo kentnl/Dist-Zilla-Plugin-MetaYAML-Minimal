@@ -18,7 +18,12 @@ my %WriteMakefileArgs = (
   "MIN_PERL_VERSION" => "5.006",
   "NAME" => "Dist::Zilla::Plugin::MetaYAML::Minimal",
   "PREREQ_PM" => {
+    "CPAN::Meta::Converter" => "2.101550",
+    "CPAN::Meta::Validator" => "2.101550",
+    "Dist::Zilla::File::FromCode" => 0,
     "Moose" => 0,
+    "Try::Tiny" => 0,
+    "YAML::Tiny" => 0,
     "strict" => 0,
     "warnings" => 0
   },
@@ -35,10 +40,15 @@ my %WriteMakefileArgs = (
 
 
 my %FallbackPrereqs = (
+  "CPAN::Meta::Converter" => "2.101550",
+  "CPAN::Meta::Validator" => "2.101550",
+  "Dist::Zilla::File::FromCode" => 0,
   "ExtUtils::MakeMaker" => 0,
   "File::Spec" => 0,
   "Moose" => 0,
   "Test::More" => "0.89",
+  "Try::Tiny" => 0,
+  "YAML::Tiny" => 0,
   "strict" => 0,
   "warnings" => 0
 );
