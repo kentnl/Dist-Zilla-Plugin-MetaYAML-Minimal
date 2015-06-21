@@ -20,7 +20,7 @@ name: Dist-Zilla-Plugin-MetaYAML-Minimal
 provides:
   Dist::Zilla::Plugin::MetaYAML::Minimal:
     file: lib/Dist/Zilla/Plugin/MetaYAML/Minimal.pm
-    version: '0.001000'
+    version: '0.001001'
 recommends:
   Moose: '2.000'
 requires:
@@ -39,4 +39,4 @@ resources:
   bugtracker: https://github.com/kentnl/Dist-Zilla-Plugin-MetaYAML-Minimal/issues
   homepage: https://github.com/kentnl/Dist-Zilla-Plugin-MetaYAML-Minimal
   repository: https://github.com/kentnl/Dist-Zilla-Plugin-MetaYAML-Minimal.git
-version: '0.001000'
+version: '0.001001'

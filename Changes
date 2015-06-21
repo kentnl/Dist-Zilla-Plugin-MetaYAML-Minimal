@@ -1,4 +1,6 @@
 Release history for Dist-Zilla-Plugin-MetaYAML-Minimal
 
+0.001001 2015-06-21T22:08:47Z 35c049b
+
 0.001000 2015-06-21T21:52:24Z 1ec9576
  - Initial release that demonstrates itself via bootstrap
