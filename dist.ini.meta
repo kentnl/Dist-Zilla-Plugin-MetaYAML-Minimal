@@ -6,7 +6,8 @@ license          = Perl_5
 copyright_holder = Kent Fredric <kentfredric@gmail.com>
 
 ; Uncomment this to bootstrap via self
-[Bootstrap::lib]
+[lib]
+lib = lib
 
 [@Author::KENTNL]
 -remove           = MetaYAML
@@ -20,8 +21,8 @@ copyfiles         = LICENSE
 srcreadme         = mkdn
 twitter_extra_hash_tags = #distzilla
 ; auto_prereqs_skip = File::Find
-
-[MetaYAML::Minimal]
+Test::Compile::PerFile.:version = 0.003902
+Test::Compile::PerFile.test_template = 02-raw-require.t.tpl
 
 [Prereqs]
 
