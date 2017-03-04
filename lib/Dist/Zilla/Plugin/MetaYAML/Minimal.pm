@@ -4,7 +4,7 @@ use warnings;
 
 package Dist::Zilla::Plugin::MetaYAML::Minimal;
 
-our $VERSION = '0.001001';
+our $VERSION = '0.001002';
 
 # ABSTRACT: Generate a reductionist YAML META file for compatibility only
 
@@ -98,7 +98,7 @@ Dist::Zilla::Plugin::MetaYAML::Minimal - Generate a reductionist YAML META file 
 
 =head1 VERSION
 
-version 0.001001
+version 0.001002
 
 =head1 SYNOPSIS
 

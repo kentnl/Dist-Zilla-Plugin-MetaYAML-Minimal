@@ -130,7 +130,7 @@
    "provides" : {
       "Dist::Zilla::Plugin::MetaYAML::Minimal" : {
          "file" : "lib/Dist/Zilla/Plugin/MetaYAML/Minimal.pm",
-         "version" : "0.001001"
+         "version" : "0.001002"
       }
    },
    "release_status" : "stable",
@@ -145,7 +145,7 @@
          "web" : "https://github.com/kentnl/Dist-Zilla-Plugin-MetaYAML-Minimal"
       }
    },
-   "version" : "0.001001",
+   "version" : "0.001002",
    "x_BuiltWith" : {
       "external_file" : "misc/built_with.json"
    },
@@ -285,7 +285,7 @@
                }
             },
             "name" : "@Author::KENTNL/MetaYAML::Minimal",
-            "version" : "0.001001"
+            "version" : "0.001002"
          },
          {
             "class" : "Dist::Zilla::Plugin::Manifest",
@@ -661,7 +661,7 @@
                   "branch" : null,
                   "changelog" : "Changes",
                   "signed" : 0,
-                  "tag" : "0.001001-source",
+                  "tag" : "0.001002-source",
                   "tag_format" : "%v-source",
                   "tag_message" : "v%v"
                },
@@ -755,7 +755,7 @@
                   "branch" : "releases",
                   "changelog" : "Changes",
                   "signed" : 0,
-                  "tag" : "0.001001",
+                  "tag" : "0.001002",
                   "tag_format" : "%v",
                   "tag_message" : "v%v"
                },

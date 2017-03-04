@@ -1,5 +1,7 @@
 Release history for Dist-Zilla-Plugin-MetaYAML-Minimal
 
+0.001002 2017-03-04T00:06:53Z b44e777
+
 0.001001 2017-03-03T23:45:19Z 2b4473a
  [Bugfix]
  - Avoid test failures on 5.26 w/ -Ddefault_inc_excludes_dot
